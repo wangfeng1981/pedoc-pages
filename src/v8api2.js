@@ -242,6 +242,29 @@ class PixelEngine {
 	log(text){ }
 
 
+	/**
+	 * 
+	 * @param {String} text 
+	 * @example
+	 * pe.log("Hello world.");
+	 */
+
+	/**
+	 * 多个数据对象计算合成结果，合成方法包括最小1，最大2，平均3，求和4，计数5。
+	 * @param {Array} dsArray 需要合成的数据对象数组，要求波段数一致，数据类型一致。  
+	 * @param {Number} method 合成方法最小1，最大2，平均3，求和4，计数5
+	 * @param {Number} validMinInc 合成有效区间下限，包含。
+	 * @param {Number} validMaxInc 合成有效区间上限，包含。
+	 * @param {Number} fillValue 填充值。
+	 * @param {Number} outType  结果输出类型，1-uint8 2-uint16 3-int16 4-uint32 5-int32 6-f32 7-f64
+	 * @returns {Dataset} 返回合成后的数据对象。
+	 * @example
+	 * //最大合成
+	 * let dataset=pe.compose2([ds1,ds2,ds3,ds4,ds5], 2, 1, 255, 0, 1);
+	 */
+	compose2(dsArray,method,validMinInc,validMaxInc,fillValue,outType){ return null;}
+
+
 
 }
 
